@@ -1,1 +1,1 @@
-web: gunicorn piqumGames.app:app
+web: gunicorn piqumGames:app
