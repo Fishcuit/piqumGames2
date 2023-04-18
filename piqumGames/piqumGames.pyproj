@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2edb9828-0321-4a0a-980b-5fc6d432571b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>piqumGames</Name>
+    <RootNamespace>piqumGames</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="runserver.py" />
+    <Compile Include="piqumGames\__init__.py" />
+    <Compile Include="piqumGames\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="piqumGames\" />
+    <Folder Include="piqumGames\static\" />
+    <Folder Include="piqumGames\static\content\" />
+    <Folder Include="piqumGames\static\fonts\" />
+    <Folder Include="piqumGames\static\img\" />
+    <Folder Include="piqumGames\static\img\cards\" />
+    <Folder Include="piqumGames\static\scripts\" />
+    <Folder Include="piqumGames\static\sound\" />
+    <Folder Include="piqumGames\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="piqumGames\static\content\gm1.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="piqumGames\static\img\bluebg.png" />
+    <Content Include="piqumGames\static\img\Board.jpg" />
+    <Content Include="piqumGames\static\img\bonus_bg.png" />
+    <Content Include="piqumGames\static\img\cards\100xcard.png" />
+    <Content Include="piqumGames\static\img\cards\10xcard.png" />
+    <Content Include="piqumGames\static\img\cards\125xcard.png" />
+    <Content Include="piqumGames\static\img\cards\12xcard.png" />
+    <Content Include="piqumGames\static\img\cards\15xcard.png" />
+    <Content Include="piqumGames\static\img\cards\16xcard.png" />
+    <Content Include="piqumGames\static\img\cards\18xcard.png" />
+    <Content Include="piqumGames\static\img\cards\20xcard.png" />
+    <Content Include="piqumGames\static\img\cards\21xcard.png" />
+    <Content Include="piqumGames\static\img\cards\24xcard.png" />
+    <Content Include="piqumGames\static\img\cards\25xcard.png" />
+    <Content Include="piqumGames\static\img\cards\27xcard.png" />
+    <Content Include="piqumGames\static\img\cards\2x.png" />
+    <Content Include="piqumGames\static\img\cards\2xcard.png" />
+    <Content Include="piqumGames\static\img\cards\30xcard.png" />
+    <Content Include="piqumGames\static\img\cards\32xcard.png" />
+    <Content Include="piqumGames\static\img\cards\36xcard.png" />
+    <Content Include="piqumGames\static\img\cards\3x.png" />
+    <Content Include="piqumGames\static\img\cards\3xcard.png" />
+    <Content Include="piqumGames\static\img\cards\40xcard.png" />
+    <Content Include="piqumGames\static\img\cards\45xcard.png" />
+    <Content Include="piqumGames\static\img\cards\48xcard.png" />
+    <Content Include="piqumGames\static\img\cards\4x.png" />
+    <Content Include="piqumGames\static\img\cards\4xcard.png" />
+    <Content Include="piqumGames\static\img\cards\50xcard.png" />
+    <Content Include="piqumGames\static\img\cards\5x.png" />
+    <Content Include="piqumGames\static\img\cards\5xcard.png" />
+    <Content Include="piqumGames\static\img\cards\60xcard.png" />
+    <Content Include="piqumGames\static\img\cards\6xcard.png" />
+    <Content Include="piqumGames\static\img\cards\75xcard.png" />
+    <Content Include="piqumGames\static\img\cards\80xcard.png" />
+    <Content Include="piqumGames\static\img\cards\8xcard.png" />
+    <Content Include="piqumGames\static\img\cards\9xcard.png" />
+    <Content Include="piqumGames\static\img\cards\bonus down.png" />
+    <Content Include="piqumGames\static\img\cards\bonus up.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_10.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_2.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_3.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_4.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_5.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_6.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_7.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_8.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_9.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_A.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_J.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_K.png" />
+    <Content Include="piqumGames\static\img\cards\Clubs_Q.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_10.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_2.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_3.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_4.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_5.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_6.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_7.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_8.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_9.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_A.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_J.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_K.png" />
+    <Content Include="piqumGames\static\img\cards\Diamonds_Q.png" />
+    <Content Include="piqumGames\static\img\cards\free pick.png" />
+    <Content Include="piqumGames\static\img\cards\free pickcard.png" />
+    <Content Include="piqumGames\static\img\cards\Grand.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_10.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_2.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_3.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_4.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_5.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_6.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_7.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_8.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_9.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_A.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_J.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_K.png" />
+    <Content Include="piqumGames\static\img\cards\Hearts_Q.png" />
+    <Content Include="piqumGames\static\img\cards\JK.png" />
+    <Content Include="piqumGames\static\img\cards\Major.png" />
+    <Content Include="piqumGames\static\img\cards\Mega.png" />
+    <Content Include="piqumGames\static\img\cards\Mini.png" />
+    <Content Include="piqumGames\static\img\cards\Minor.png" />
+    <Content Include="piqumGames\static\img\cards\NaNxcard.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_10.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_2.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_3.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_4.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_5.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_6.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_7.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_8.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_9.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_A.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_J.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_K.png" />
+    <Content Include="piqumGames\static\img\cards\Spades_Q.png" />
+    <Content Include="piqumGames\static\img\cards\wild.png" />
+    <Content Include="piqumGames\static\img\cards\XX.png" />
+    <Content Include="piqumGames\static\img\chest.png" />
+    <Content Include="piqumGames\static\img\gem_bg.jpg" />
+    <Content Include="piqumGames\static\img\kingsize dark.png" />
+    <Content Include="piqumGames\static\img\KSG_Logo.png" />
+    <Content Include="piqumGames\static\img\ln.png" />
+    <Content Include="piqumGames\static\img\Meter_Royals_Ace.png" />
+    <Content Include="piqumGames\static\img\Meter_Royals_Jack.png" />
+    <Content Include="piqumGames\static\img\Meter_Royals_King.png" />
+    <Content Include="piqumGames\static\img\Meter_Royals_Queen.png" />
+    <Content Include="piqumGames\static\img\piQum_bonus.png" />
+    <Content Include="piqumGames\static\img\piqum_classic.png" />
+    <Content Include="piqumGames\static\img\pokerlogo.png" />
+    <Content Include="piqumGames\static\img\redbg.png" />
+    <Content Include="piqumGames\static\scripts\gm1.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="piqumGames\static\sound\backround.mp3" />
+    <Content Include="piqumGames\static\sound\coin.mp3" />
+    <Content Include="piqumGames\templates\game1.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="requirements.txt" />
+    <Content Include="piqumGames\static\content\site.css" />
+    <Content Include="piqumGames\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="piqumGames\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="piqumGames\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="piqumGames\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="piqumGames\static\scripts\bootstrap.js" />
+    <Content Include="piqumGames\static\scripts\bootstrap.min.js" />
+    <Content Include="piqumGames\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="piqumGames\static\scripts\jquery-1.10.2.js" />
+    <Content Include="piqumGames\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="piqumGames\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="piqumGames\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="piqumGames\static\scripts\jquery.validate.js" />
+    <Content Include="piqumGames\static\scripts\jquery.validate.min.js" />
+    <Content Include="piqumGames\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="piqumGames\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="piqumGames\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="piqumGames\static\scripts\respond.js" />
+    <Content Include="piqumGames\static\scripts\respond.min.js" />
+    <Content Include="piqumGames\static\scripts\_references.js" />
+    <Content Include="piqumGames\templates\about.html" />
+    <Content Include="piqumGames\templates\contact.html" />
+    <Content Include="piqumGames\templates\index.html" />
+    <Content Include="piqumGames\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.10</Version>
+      <Description>env (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

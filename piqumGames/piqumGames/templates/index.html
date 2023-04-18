@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<body>
+    
+
+    <main style="padding-bottom: 40px">
+        <h2 class="title" id="games">Demo's limited on Mobile.</h2>
+        <div class="games">
+            <a href="{{ url_for('game1') }}">
+                <div class="game-list">
+                    <img src="static/img/KSG_Logo.png"
+                         alt=""
+                         style="width: 100px; height: 100px" />
+                    <h3>piQum<span class="registered-trademark">&#174;</span></h3>
+                    <p class="patent">Patent Pending</p>
+                    <p></p>
+                </div>
+            </a>
+            <a href="game6.html">
+                <div class="game-list">
+                    <img src="static/img/KSG_Logo.png"
+                         alt=""
+                         style="width: 100px; height: 100px" />
+                    <h3>Bonus piQum<span class="registered-trademark">&#174;</span></h3>
+                    <p class="patent">Patent Pending</p>
+                    <p></p>
+                </div>
+            </a>
+            <a href="game4.html">
+                <div class="game-list">
+                    <img src="static/img/KSG_Logo.png"
+                         alt=""
+                         style="width: 100px; height: 100px" />
+                    <h3>PiQum<span class="registered-trademark">&#174;</span> Poker</h3>
+                    <p class="patent">Patent Pending</p>
+                    <p></p>
+                </div>
+            </a>
+            <a href="game3.html">
+                <div class="game-list">
+                    <img src="static/img/KSG_Logo.png"
+                         alt=""
+                         style="width: 100px; height: 100px" />
+                    <h3>piQum<span class="registered-trademark">&#174;</span> Royale</h3>
+                    <p class="patent">Patent Pending</p>
+                    <p></p>
+                </div>
+            </a>
+            <!-- <a href="game2.html">
+              <div class="game-list">
+                <img
+                  src="img/KSG_Logo.png"
+                  alt="n"
+                  style="width: 100px; height: 100px"
+                />
+                <h3>Triple piQum</h3>
+                <p></p>
+              </div>
+            </a>
+
+            <a href="game7.html">
+              <div class="game-list">
+                <img
+                  src="img/KSG_Logo.png"
+                  alt=""
+                  style="width: 100px; height: 100px"
+                />
+                <h3>piQum Gems</h3>
+                <p></p>
+              </div>
+            </a> -->
+            <!-- <a href="game5.html">
+              <div class="game-list">
+                <img
+                  src="img/KSG_Logo.png"
+                  alt=""
+                  style="width: 100px; height: 100px"
+                />
+                <h3>PiQum Royal 3 row</h3>
+                <p></p>
+              </div>
+            </a> -->
+        </div>
+        <div>
+            <h2 class="title">Reach out to us</h2>
+            <div class="contact"
+                 id="contact"
+                 style="padding-bottom: 10px !important">
+                <div class="contact-list contact-address">
+                    <h5>
+                        <span>
+                            <i class="fa fa-map-marker w3-xlarge w3-text-light-grey"></i>
+                        </span>Address
+                    </h5>
+                    <p>KingSize Games, Inc.</p>
+                    <p>2035 Regent St.</p>
+                    <p>Reno, NV 89523</p>
+                </div>
+                <div class="contact-list">
+                    <h5>
+                        <span><i class="fa fa-phone w3-xlarge w3-text-light-grey"></i></span>Phone/Email
+                    </h5>
+                    <p>+1-775-513-7516</p>
+                    <p>bizdev@kingsizegames.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+
+
+{% endblock %}
