@@ -7,6 +7,7 @@ from flask import render_template
 from piqumGames.app import app
 
 
+
 @app.route('/')
 @app.route('/home')
 def home():
