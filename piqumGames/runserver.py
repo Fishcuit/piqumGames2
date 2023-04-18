@@ -3,7 +3,7 @@ This script runs the piqumGames application using a development server.
 """
 
 from os import environ
-from piqumGames import app
+from piqumGames.app import app
 
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', 'localhost')
