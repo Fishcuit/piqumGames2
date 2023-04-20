@@ -52,35 +52,37 @@ def home():
         year=datetime.now().year,
     )
 
-@app.route('/contact')
-def contact():
-    """Renders the contact page."""
-    return render_template(
-        'contact.html',
-        title='Contact',
-        year=datetime.now().year,
-        message='Your contact page.'
-    )
 
-@app.route('/about')
-def about():
-    """Renders the about page."""
-    return render_template(
-        'about.html',
-        title='About',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
 
 @app.route('/game1')
 @login_required
 def game1():
-    """Renders the about page."""
+    """Renders Game 1."""
     return render_template(
         'game1.html',
         title='piQum',
         year=datetime.now().year,
         message='piQum Classic'
+    )
+@app.route('/game2')
+@login_required
+def game2():
+    """Renders the Game 2."""
+    return render_template(
+        'game2.html',
+        title='Bonus piQum',
+        year=datetime.now().year,
+        message='Bonus piQum'
+    )
+@app.route('/game3')
+@login_required
+def game3():
+    """Renders the Game 2."""
+    return render_template(
+        'game3.html',
+        title='piQum Poker',
+        year=datetime.now().year,
+        message='piQum Poker'
     )
 
 if __name__ == '__main__':

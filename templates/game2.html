@@ -1,10 +1,10 @@
 <link rel="stylesheet" type="text/css" href="/static/content/gm1.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-<link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+<link rel="stylesheet" href="/static/content/site.css" />
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>PiQum Classic</title>
+    <title>Bonus PiQum</title>
   </head>
 
   <body>
@@ -19,9 +19,8 @@
             href="javascript:void(0);"
             onclick="myFunction()"
             title="Toggle Navigation Menu"
-          >
-            <i class="fa fa-bars"></i>
-          </a>
+            ><i class="fa fa-bars"></i
+          ></a>
 
           <div>
             <a
@@ -33,8 +32,8 @@
               href="#games"
               class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
             >
-              Games
-            </a>
+              Games</a
+            >
             <a
               href="#contact"
               class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
@@ -48,12 +47,6 @@
           id="navDemo"
           class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-large"
         >
-          <a
-            href="#about"
-            class="w3-bar-item w3-button w3-padding-large"
-            onclick="myFunction()"
-            >About</a
-          >
           <a
             href="#games"
             class="w3-bar-item w3-button w3-padding-large"
@@ -71,15 +64,15 @@
     </header>
     <section>
       <div class="hero-banner">
-        <h1>PiQum<span class="registered-trademark">&#174;</span> Classic</h1>
+        <h1>Bonus PiQum<span class="registered-trademark">&#174;</span></h1>
         <p>presented by</p>
-        <img src="static/img/kingsize dark.png" alt="" />
+        <img src="/static/img/kingsize dark.png" alt="" />
       </div>
     </section>
     <div id="canvas-wrapper">
       <div id="canvas" class="row">
         <div class="column side-bar">
-          <img class="title-logo" src="static/img/piqum_classic.png" alt="" />
+          <img class="title-logo" src="/static/img/piQum_bonus.png" alt="" />
           <fieldset class="grand">
             <legend class="grand">
               <p>G r a n d</p>
@@ -115,22 +108,22 @@
           <div class="card-meter-container">
             <img
               class="card-meter"
-              src="static/img/Meter_Royals_Jack.png"
+              src="/static/img/Meter_Royals_Jack.png"
               alt=""
             />
             <img
               class="card-meter"
-              src="static/img/Meter_Royals_Queen.png"
+              src="/static/img/Meter_Royals_Queen.png"
               alt=""
             />
             <img
               class="card-meter"
-              src="static/img/Meter_Royals_King.png"
+              src="/static/img/Meter_Royals_King.png"
               alt=""
             />
             <img
               class="card-meter"
-              src="static/img/Meter_Royals_Ace.png"
+              src="/static/img/Meter_Royals_Ace.png"
               alt=""
             />
           </div>
@@ -183,16 +176,21 @@
         <button id="close-popup">Shuffle</button>
       </div>
     </div>
+    <div
+      id="backgroundMusicSource"
+      data-url="{{ url_for('static', filename='sounds/backround.mp3') }}"
+      style="display: none"
+    ></div>
 
     <div class="container body-content">
       <hr />
       <footer>
         <div class="footer-content">
           <!-- <img
-                  class=" "
-                  src="img/kingsize dark.png"
-                  alt=""
-                /> -->
+            class=" "
+            src="img/kingsize dark.png"
+            alt=""
+          /> -->
         </div>
         <div class="footer-bottom">
           <p>Copyright &copy;2023 KingSize Games Inc.</p>
@@ -207,6 +205,7 @@
         </div>
       </footer>
     </div>
-    <script type="text/javascript" src="/static/scripts/gm1.js"></script>
+    <script src="{{ url_for('static', filename='music.js') }}"></script>
+    <script type="text/javascript" src="/static/scripts/gm2.js"></script>
   </body>
 </html>

@@ -23,11 +23,6 @@
             >Home</a
           >
           <a
-            href="#about"
-            class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
-            >About</a
-          >
-          <a
             href="#games"
             class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
           >
@@ -68,17 +63,28 @@
           class="w3-bar-item w3-button w3-padding-large"
           onclick="myFunction()"
           >Contact</a
-          <a
-          href="#contact"
-          class="w3-bar-item w3-button w3-padding-large"
-          onclick="myFunction()"
-          >Logout</a
+        >
+        <a>
+          href="#contact" class="w3-bar-item w3-button w3-padding-large"
+          onclick="myFunction()" >Logout</a
         >
       </div>
     </div>
   </header>
 
   <main style="padding-bottom: 40px">
+    <div class="about">
+      Are you ready to experience the ultimate gaming adventure? Look no further
+      than Piqum – a series of four thrilling games that will keep you
+      entertained for hours on end. Whether you prefer the classic version or
+      the bonus edition, Piqum will challenge you and provide endless fun.
+      Feeling lucky? Try your hand at Piqum Poker and see if you can put
+      together a winning hand! And for those seeking the ultimate gaming rush,
+      gaming experience like no other with Piqum Royale! In this fast-paced
+      game, you'll be on a mission to climb the ladder and win amazing jackpots.
+      With engaging gameplay and addictive challenges, Piqum is the ultimate
+      addition to any casino collection.
+    </div>
     <h2 class="title" id="games">Demo's limited on Mobile.</h2>
     <div class="games">
       <a href="{{ url_for('game1') }}">
@@ -93,7 +99,7 @@
           <p></p>
         </div>
       </a>
-      <a href="game6.html">
+      <a href="{{ url_for('game2') }}">
         <div class="game-list">
           <img
             src="static/img/KSG_Logo.png"
@@ -105,7 +111,7 @@
           <p></p>
         </div>
       </a>
-      <a href="game4.html">
+      <a href="{{ url_for('game3') }}">
         <div class="game-list">
           <img
             src="static/img/KSG_Logo.png"

@@ -1,12 +1,11 @@
-<link rel="stylesheet" type="text/css" href="/static/content/gm1.css" />
+<link rel="stylesheet" type="text/css" href="/static/content/gm3.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-<link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+<link rel="stylesheet" href="static/content/site.css" />
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>PiQum Classic</title>
+    <title>PiQum Poker</title>
   </head>
-
   <body>
     <header style="position: relative">
       <div class="w3-top" class="header" id="home">
@@ -19,9 +18,8 @@
             href="javascript:void(0);"
             onclick="myFunction()"
             title="Toggle Navigation Menu"
-          >
-            <i class="fa fa-bars"></i>
-          </a>
+            ><i class="fa fa-bars"></i
+          ></a>
 
           <div>
             <a
@@ -29,12 +27,13 @@
               class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
               >Home</a
             >
+
             <a
               href="#games"
               class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
             >
-              Games
-            </a>
+              Games</a
+            >
             <a
               href="#contact"
               class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
@@ -48,12 +47,6 @@
           id="navDemo"
           class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-large"
         >
-          <a
-            href="#about"
-            class="w3-bar-item w3-button w3-padding-large"
-            onclick="myFunction()"
-            >About</a
-          >
           <a
             href="#games"
             class="w3-bar-item w3-button w3-padding-large"
@@ -71,70 +64,97 @@
     </header>
     <section>
       <div class="hero-banner">
-        <h1>PiQum<span class="registered-trademark">&#174;</span> Classic</h1>
+        <h1>PiQum<span class="registered-trademark">&#174;</span> Poker</h1>
         <p>presented by</p>
-        <img src="static/img/kingsize dark.png" alt="" />
+        <img src="/static/img/kingsize dark.png" alt="" />
       </div>
     </section>
     <div id="canvas-wrapper">
       <div id="canvas" class="row">
         <div class="column side-bar">
-          <img class="title-logo" src="static/img/piqum_classic.png" alt="" />
+          <img class="title-logo" src="/static/img/pokerlogo.png" alt="" />
           <fieldset class="grand">
             <legend class="grand">
-              <p>G r a n d</p>
+              <p>Royal Flush</p>
             </legend>
-            <p>$3000</p>
+            <p>$1000</p>
           </fieldset>
           <fieldset class="other">
             <legend class="other">
-              <p>M e g a</p>
+              <p>Straight Flush</p>
             </legend>
-            <p>$300</p>
+            <p>$500</p>
           </fieldset>
           <fieldset class="other">
             <legend class="other">
-              <p>M a j o r</p>
+              <p>Four of a Kind</p>
             </legend>
-            <p>$90</p>
+            <p>$50</p>
           </fieldset>
           <fieldset class="other">
             <legend class="other">
-              <p>M i n o r</p>
+              <p>Full House</p>
+            </legend>
+            <p>$40</p>
+          </fieldset>
+          <fieldset class="other">
+            <legend class="other">
+              <p>Flush</p>
             </legend>
             <p>$30</p>
           </fieldset>
           <fieldset class="other">
             <legend class="other">
-              <p>M i n i</p>
+              <p>Straight</p>
             </legend>
-            <p>$15</p>
+            <p>$20</p>
+          </fieldset>
+          <fieldset class="other">
+            <legend class="other">
+              <p>Three of a Kind</p>
+            </legend>
+            <p>$8</p>
+          </fieldset>
+          <fieldset class="other">
+            <legend class="other">
+              <p>Two Pairs</p>
+            </legend>
+            <p>$2</p>
           </fieldset>
         </div>
-        <div class="column grow">
+        <div class="column grow center">
           <div class="card-meter-container">
             <img
               class="card-meter"
-              src="static/img/Meter_Royals_Jack.png"
+              src="/static/img/Meter_Royals_Ace.png"
               alt=""
             />
             <img
               class="card-meter"
-              src="static/img/Meter_Royals_Queen.png"
+              src="/static/img/Meter_Royals_King.png"
               alt=""
             />
             <img
               class="card-meter"
-              src="static/img/Meter_Royals_King.png"
+              src="/static/img/Meter_Royals_Queen.png"
               alt=""
             />
             <img
               class="card-meter"
-              src="static/img/Meter_Royals_Ace.png"
+              src="/static/img/Meter_Royals_Jack.png"
               alt=""
             />
           </div>
-
+          <div class="column-meter">
+            <fieldset class="meter-value">
+              <legend class="other">
+                <p>P o k e r W i n</p>
+              </legend>
+              <p id="poker-win">--</p>
+            </fieldset>
+          </div>
+          <div class="possible-cards">Poker Hand</div>
+          <div id="poker-hand"></div>
           <div class="card-meter-container">
             <div class="column-meter">
               <fieldset class="meter-value">
@@ -176,23 +196,15 @@
         <!-- <div class="column side-bar"><button id="fullscreen-btn">Toggle Full Screen</button></div> -->
       </div>
     </div>
-    <div id="bonus-popup" class="bonus-popup hidden">
-      <div class="bonus-popup-content">
-        <h2>Bonus Level <span id="bonus-level"></span></h2>
-        <p id="bonus-reward">You could possibly win:</p>
-        <button id="close-popup">Shuffle</button>
-      </div>
-    </div>
-
     <div class="container body-content">
       <hr />
       <footer>
         <div class="footer-content">
           <!-- <img
-                  class=" "
-                  src="img/kingsize dark.png"
-                  alt=""
-                /> -->
+          class=" "
+          src="img/kingsize dark.png"
+          alt=""
+        /> -->
         </div>
         <div class="footer-bottom">
           <p>Copyright &copy;2023 KingSize Games Inc.</p>
@@ -207,6 +219,6 @@
         </div>
       </footer>
     </div>
-    <script type="text/javascript" src="/static/scripts/gm1.js"></script>
+    <script type="text/javascript" src="/static/scripts/gm3.js"></script>
   </body>
 </html>

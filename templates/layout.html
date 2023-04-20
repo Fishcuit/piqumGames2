@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - My Flask Application</title>
-    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>piQum Series</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www.w3schools.com/w3css/4/w3.css"
+    />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <section>
-        <div class="hero-banner">
-            <h1>piQum<span class="registered-trademark">&#174;</span> Series</h1>
-            <p>presented by</p>
-            <img src="static/img/kingsize dark.png" alt="" />
-        </div>
+      <div class="hero-banner">
+        <h1>piQum<span class="registered-trademark">&#174;</span> Series</h1>
+        <p>presented by</p>
+        <img src="static/img/kingsize dark.png" alt="" />
+        <link rel="icon" href="/static/favicon.ico" />
+      </div>
     </section>
 
     <div class="container body-content">
-        {% block content %}{% endblock %}
-        <hr />
-        <footer>
-            <div class="footer-content">
-                <img class=" " src="static/img/kingsize dark.png" alt="" />
-            </div>
-            <div class="footer-bottom">
-                <p>Copyright &copy;2023 KingSize Games Inc.</p>
-                <p class="patent">COPYRIGHT AND PATENTS. The proprietary products shown on this website are covered by various patents, patent applications, trademarks, trademark applications, design, copyright, and licensing agreements in order to protect Kingsize Games' intellectual property.  Ownership of copyright and other Intellectual Property will at all times remain exclusively with Kingsize Games.</p>
-            </div>
-        </footer>
+      {% block content %}{% endblock %}
+      <hr />
+      <footer>
+        <div class="footer-content">
+          <img class=" " src="static/img/kingsize dark.png" alt="" />
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright &copy;2023 KingSize Games Inc.</p>
+          <p class="patent">
+            COPYRIGHT AND PATENTS. The proprietary products shown on this
+            website are covered by various patents, patent applications,
+            trademarks, trademark applications, design, copyright, and licensing
+            agreements in order to protect Kingsize Games' intellectual
+            property. Ownership of copyright and other Intellectual Property
+            will at all times remain exclusively with Kingsize Games.
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/respond.js"></script>
     {% block scripts %}{% endblock %}
-
-</body>
+  </body>
 </html>
