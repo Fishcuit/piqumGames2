@@ -570,7 +570,7 @@ function createCard(index) {
       } else if (selectedCard.name == "Bonus") {
         message.innerText = "Bonus Level Achieved. Good Luck";
       } else {
-        message.innerText = "No Winner.\n Press Deal to Play again!";
+        message.innerText = "No Winner. Press Deal to Play again!";
       }
       currentScore.innerText = "$" + game.bank;
       currentWin.innerText =
