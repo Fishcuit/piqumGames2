@@ -87,7 +87,7 @@ def game3():
 
 @app.route('/gems')
 @login_required
-def game3():
+def game4():
     """Renders the Gems Bonus."""
     return render_template(
         'gems.html',
