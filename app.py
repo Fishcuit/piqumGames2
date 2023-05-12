@@ -85,12 +85,12 @@ def game3():
         message='piQum Poker'
     )
 
-@app.route('/gems')
+@app.route('/game4')
 @login_required
 def game4():
     """Renders the Gems Bonus."""
     return render_template(
-        'gems.html',
+        'game4.html',
         title='Gems',
         year=datetime.now().year,
         message='Gems'
