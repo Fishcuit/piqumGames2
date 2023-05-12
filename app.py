@@ -85,6 +85,17 @@ def game3():
         message='piQum Poker'
     )
 
+@app.route('/gems')
+@login_required
+def game3():
+    """Renders the Gems Bonus."""
+    return render_template(
+        'gems.html',
+        title='Gems',
+        year=datetime.now().year,
+        message='Gems'
+    )
+
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
 
