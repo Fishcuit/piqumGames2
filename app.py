@@ -14,7 +14,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "login"
 
-# Create a simple user store (replace this with a real database in production)
+# Create a simple user store (replace this with a real database in production)skldj
 users = {'KSG': User('KSG', 'piqumisgreat')}  # Replace with your desired username and password
 
 @login_manager.user_loader
@@ -27,7 +27,6 @@ def login():
         username = request.form['username']
         password = request.form['password']
         user = users.get(username)
-
         if user and user.check_password(password):
             login_user(user)
             return redirect(url_for('home'))
