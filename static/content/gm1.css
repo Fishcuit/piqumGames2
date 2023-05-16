@@ -26,6 +26,7 @@
     justify-content: center;
     align-items: center;
     /* background-image: url("../img/Board.jpg"); */
+    padding-top: 50px;
 }
 
 #canvas {
@@ -34,7 +35,8 @@
     background-size: cover;
     width: 100%;
     max-width: 1325px;
-    height: 675px;
+    height: 100%;
+    padding-top: 100px;
 }
 
 .card-row {
@@ -420,16 +422,19 @@ legend.other {
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 0 20%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: scale(0.9);
     
 }
 
 .bonus-popup-content {
     background-image: url("../img/bonus_bg.png");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
     color: antiquewhite;
@@ -490,3 +495,6 @@ legend.other {
     margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
+
+
+ 

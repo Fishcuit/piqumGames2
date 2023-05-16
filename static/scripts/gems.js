@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
     hideEndModal();
     hideBonusModal();
     resetGame();
-   
   });
+
+  const currentScore = document.getElementById("current-score");
 
   function generateFirstLevelSymbols() {
     const symbolList = [];
@@ -184,12 +185,14 @@ document.addEventListener("DOMContentLoaded", function () {
           matchedSymbols = selectedCells;
 
           // Show the modal
-          showModal();
+          setTimeout(() => {
+            showModal();
+          }, 2000); // Delay execution by 2000 milliseconds (2 seconds)
         }
         // If a match is found in the first 3 selections, prevent further selections
         return;
       } else if (selectedCells === 5) {
-        gameOver()
+        gameOver();
       }
     }
   }
@@ -209,12 +212,22 @@ document.addEventListener("DOMContentLoaded", function () {
       symbolCounts[symbolText] = (symbolCounts[symbolText] || 0) + 1;
     });
 
-    return Object.values(symbolCounts).some((count) => count >= 3);
+    const matchingSymbol = Object.keys(symbolCounts).find((symbol) => symbolCounts[symbol] >= 3);
+
+    if (matchingSymbol) {
+      selectedSymbols.forEach((symbol) => {
+        if (symbol.textContent === matchingSymbol) {
+          symbol.classList.add('pulse');
+        }
+      });
+      return true;
+    }
+
+    return false;
   }
 
   function gameOver() {
     let winnings = 0;
- 
 
     if (score >= 8) winnings = 3000;
     else if (score >= 6) winnings = 300;
@@ -226,6 +239,8 @@ document.addEventListener("DOMContentLoaded", function () {
     gameOverMessage.innerText = `Final Score: ${score} \n You won $${winnings}.`;
 
     showEndModal();
+    
+    resetGame()
   }
 
   function updateLevelAndScoreDisplays() {
@@ -259,29 +274,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showModal() {
-    let modal = document.getElementById('modal');
+    let modal = document.getElementById("modal");
     modal.style.display = "block";
   }
 
   function hideModal() {
-    let modal = document.getElementById('modal');
+    let modal = document.getElementById("modal");
     modal.style.display = "none";
   }
 
   function showEndModal() {
-    let modal = document.getElementById('gameOverModal');
+    let modal = document.getElementById("gameOverModal");
     modal.style.display = "block";
   }
 
   function hideEndModal() {
-    let modal = document.getElementById('gameOverModal');
+    let modal = document.getElementById("gameOverModal");
     modal.style.display = "none";
   }
   function hideBonusModal() {
-    let modal = document.getElementById('bonus-popup');
+    let modal = document.getElementById("bonus-popup");
     modal.style.display = "none";
   }
-  
 
   function resetGame() {
     level = 0;
@@ -292,8 +306,8 @@ document.addEventListener("DOMContentLoaded", function () {
     symbols.forEach((symbolObj, index) => {
       symbolObj.count = index === 0 ? 13 : index === 1 ? 12 : 0;
     });
-    
-    startNextLevel()
+
+    startNextLevel();
   }
 
   function startNextLevel() {
@@ -306,6 +320,10 @@ document.addEventListener("DOMContentLoaded", function () {
     renderBoard();
     updateLevelSymbolsDisplay();
     logGameBoard(); // Log the game board state
+
+    // Remove the pulse class from all symbols
+    const allSymbols = document.querySelectorAll('.grid-item .symbol');
+    allSymbols.forEach((symbol) => symbol.classList.remove('pulse'));
   }
 
   function logGameBoard() {
