@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
 }
+
+
 .containerx {
   display: flex;
   flex-direction: column;
@@ -74,6 +76,18 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.endmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .modal-content {
   font-size: 20px;
   color: white;
@@ -81,7 +95,12 @@
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 #bonus-container {
   display: flex;
@@ -130,4 +149,26 @@ legend.other {
   border: 2px solid rgb(50, 13, 213);
   border-radius: 10px;
   background-color: black;
+}
+
+.my-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #58510d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.my-button:hover {
+  background-color: #333;
+}
+
+.my-button:focus {
+  outline: none;
 }

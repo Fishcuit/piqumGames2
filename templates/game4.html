@@ -121,16 +121,6 @@
       </div>
     </header>
     <div class="containerx">
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <p>
-            You successfully matched three symbols! Press continue to advance to
-            the next level.
-          </p>
-          <button id="continueButton">Continue</button>
-        </div>
-      </div>
-
       <div id="levelDisplay">Level: 1</div>
       <div id="bonus-container">
         <div class="pay-table">
@@ -206,6 +196,21 @@
 
       <div id="scoreDisplay">Score: 0</div>
       <div id="levelSymbols"></div>
+    </div>
+    <div id="gameOverModal" class="endmodal">
+      <div class="modal-content">
+        <p id="gameOverMessage"></p>
+        <button id="startOverButton" class = "my-button">Continue</button>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>
+          You successfully matched three symbols! Press continue to advance to
+          the next level.
+        </p>
+        <button id="continueButton" class = "my-button">Continue</button>
+      </div>
     </div>
     <script src="/static/scripts/gems.js"></script>
   </body>

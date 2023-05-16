@@ -268,68 +268,10 @@ const rules = {
       name: "Bonus",
     },
   ],
-  bonusDecks: [
-    [
-      { imgSource: "Mini.png", payOut: 15, name: "Mini" },
-      { imgSource: "Mini.png", payOut: 15, name: "Mini" },
-      { imgSource: "Mini.png", payOut: 15, name: "Mini" },
-      { imgSource: "bonus up.png", payOut: 0, name: "Bonus" },
-      { imgSource: "bonus up.png", payOut: 0, name: "Bonus" },
-    ],
-    [
-      { imgSource: "Minor.png", payOut: 30, name: "Minor" },
-      { imgSource: "Minor.png", payOut: 30, name: "Minor" },
-      { imgSource: "Minor.png", payOut: 30, name: "Minor" },
-      { imgSource: "bonus up.png", payOut: 0, name: "Bonus" },
-      { imgSource: "bonus down.png", payOut: 0 },
-    ],
-    [
-      { imgSource: "Minor.png", payOut: 30, name: "Minor" },
-      { imgSource: "Major.png", payOut: 90, name: "Major" },
-      { imgSource: "Major.png", payOut: 90, name: "Major" },
-      { imgSource: "bonus up.png", payOut: 0, name: "Bonus" },
-      { imgSource: "bonus down.png", payOut: 0 },
-    ],
-    [
-      { imgSource: "Minor.png", payOut: 30, name: "Minor" },
-      { imgSource: "Major.png", payOut: 90, name: "Major" },
-      { imgSource: "Mega.png", payOut: 300, name: "Mega" },
-      { imgSource: "bonus up.png", payOut: 0, name: "Bonus" },
-      { imgSource: "bonus down.png", payOut: 0 },
-    ],
-    [
-      { imgSource: "Major.png", payOut: 90, name: "Major" },
-      { imgSource: "Major.png", payOut: 90, name: "Major" },
-      { imgSource: "Mega.png", payOut: 300, name: "Mega" },
-      { imgSource: "bonus up.png", payOut: 0, name: "Bonus" },
-      { imgSource: "bonus down.png", payOut: 0 },
-    ],
-    [
-      { imgSource: "Major.png", payOut: 90, name: "Major" },
-      { imgSource: "Mega.png", payOut: 300, name: "Mega" },
-      { imgSource: "Mega.png", payOut: 300, name: "Mega" },
-      { imgSource: "bonus up.png", payOut: 0, name: "Bonus" },
-      { imgSource: "bonus down.png", payOut: 0 },
-    ],
-    [
-      { imgSource: "Major.png", payOut: 90, name: "Major" },
-      { imgSource: "Mega.png", payOut: 300, name: "Mega" },
-      { imgSource: "Grand.png", payOut: 3000, name: "Grand" },
-      { imgSource: "bonus up.png", payOut: 0, name: "Bonus" },
-      { imgSource: "bonus down.png", payOut: 0 },
-    ],
-    [
-      { imgSource: "Mega.png", payOut: 90, name: "Mega" },
-      { imgSource: "Mega.png", payOut: 300, name: "Mega" },
-      { imgSource: "Grand.png", payOut: 3000, name: "Grand" },
-      { imgSource: "Grand.png", payOut: 3000, name: "Grand" },
-      { imgSource: "Grand.png", payOut: 3000, name: "Grand" },
-    ],
-  ],
 };
 for (let i = 0; i < 35; i++) {
   rules.deck.push({
-    imgSource: "JK.png",
+    imgSource: "bonus up.png",
     payOut: 0,
   });
 }
@@ -359,26 +301,15 @@ function startGame() {
     bet: 1,
     multiplier: 1,
     previousHandMultipliers: [],
-    bonusLevel: 1,
   };
 
-  //If bonusLevel is greater than 1, show the cards to the player before flipping and shuffling them
-  if (game.bonusLevel > 1) {
-    dealContainer.style.display = "none";
-    confirmButtonContainer.style.display = "block";
-    confirmButton.addEventListener("click", function () {
-      dealContainer.style.display = "block";
-      confirmButtonContainer.style.display = "none";
-      dealHand();
-    });
-  } else {
-    dealHand();
-  }
+  dealHand();
+
   function dealHand() {
     game.selected = null;
     game.flipped = false;
-    game.deck = shuffle(getBonusDeck(game.bonusLevel));
-    game.deck = shuffle(getBonusDeck(game.bonusLevel));
+    game.deck = shuffle(rules.deck);
+    game.deck = shuffle(rules.deck);
 
     for (const [index, card] of game.hand.entries()) {
       // Display multipliers from the previous hand on the card backs
@@ -480,12 +411,8 @@ function startGame() {
         }
       }
       // If the card is a Free Play card, return it, even if it's not selected
-      if (isFreePlayCard && game.bonusLevel == 1) {
+      if (isFreePlayCard) {
         return card;
-      }
-
-      if (game.bonusLevel > 1) {
-        return null;
       }
 
       // If the card is not a multiplier card, return null
@@ -521,15 +448,22 @@ function startGame() {
       game.multiplier = 1;
     }
 
+    const bonusPopup = document.getElementById("bonus-popup");
+
     const isBonusCard = selectedCard.imgSource === "bonus up.png";
-    const isBonusDownCard = selectedCard.imgSource === "bonus down.png";
 
     if (isBonusCard) {
-      game.bonusLevel++;
-    } else if (isBonusDownCard) {
-      game.bonusLevel--;
-    } else {
-      game.bonusLevel = 1;
+      setTimeout(() => {
+        showBonusPopup();
+      }, 2000); // Delay execution by 2000 milliseconds (2 seconds)
+    
+    
+
+      function showBonusPopup() {
+        // bonusPopup.classList.remove("hidden");
+        bonusPopup.style.display = "block"
+        
+      }
     }
 
     console.log(game.multiplier);
@@ -593,58 +527,8 @@ function startGame() {
     currentWin.innerText = "--";
     message.innerText = "Pick any Card to play!";
 
-    const bonusPopup = document.getElementById("bonus-popup");
-    const bonusLevelElement = document.getElementById("bonus-level");
-    const bonusRewardElement = document.getElementById("bonus-reward");
-    const closePopupButton = document.getElementById("close-popup");
-    if (game.bonusLevel > 1) {
-      showBonusPopup();
-    }
-    function showBonusPopup() {
-      bonusPopup.classList.remove("hidden");
-      bonusPopup.classList.add("color-swirl");
-      bonusLevelElement.textContent = game.bonusLevel - 1;
-
-      const rewards = getReward(game.bonusLevel);
-      const rewardsHtml = rewards
-        .map(
-          (reward) =>
-            `<img src="static/img/cards/${reward.imgSource}" alt="${reward.imgSource}">`
-        )
-        .join(" ");
-      bonusRewardElement.innerHTML = `${rewardsHtml}`;
-
-      setTimeout(() => {
-        bonusPopup.classList.remove("color-swirl");
-      }, 2000);
-    }
-
-    function getReward(level) {
-      const currentDeck = rules.bonusDecks[level - 2];
-      const rewards = currentDeck.map((card) => {
-        return { imgSource: card.imgSource, payOut: card.payOut };
-      });
-      return rewards;
-    }
-
-    closePopupButton.addEventListener("click", () => {
-      bonusPopup.classList.add("hidden");
-      for (const card of game.hand) {
-        card.classList.remove("deal");
-      }
-      dealHand();
-    });
+   
   });
-
-  function getBonusDeck(bonusLevel) {
-    if (bonusLevel > 1 && bonusLevel <= rules.bonusDecks.length) {
-      game.multiplier = 1;
-      console.log(game.previousHandMultipliers);
-      return rules.bonusDecks[bonusLevel - 2];
-    } else {
-      return rules.deck;
-    }
-  }
 }
 
 function shuffle(deck) {
