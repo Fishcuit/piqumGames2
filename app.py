@@ -95,6 +95,17 @@ def game4():
         message='Gems'
     )
 
+@app.route('/game5')
+@login_required
+def game5():
+    """Renders the Gems Bonus."""
+    return render_template(
+        'game5.html',
+        title='Gems',
+        year=datetime.now().year,
+        message='Gems'
+    )
+
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
 

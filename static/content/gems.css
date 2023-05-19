@@ -4,6 +4,23 @@
   padding: 0;
 }
 
+#bonus-popup {
+  display: none; 
+  position: fixed; /* Fixed/sticky position */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center; /* Align items center in flex container */
+  
+ 
+}
+
 
 .containerx {
   display: flex;
@@ -18,9 +35,12 @@
   font-weight: 500;
   background-image: url("../img/gem_bg.jpg");
   background-position: center;
-  background-size: contain;
+  background-size:auto;
   background-repeat: no-repeat;
   padding-top: 50px;
+  width: 50%;
+  height: 100%;
+
 }
 .grid-container {
   display: grid;
@@ -104,7 +124,7 @@
 }
 #bonus-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 10px;
 }
 fieldset.grand {
