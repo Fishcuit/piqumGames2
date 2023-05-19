@@ -29,8 +29,9 @@ html {
 
 
 #canvas {
+  padding-top: 100px;
   width: 40%;
-height: 910px;
+height: 1010px;
   background-image: url("../img/redbg.png");
   background-repeat: no-repeat;
   background-position: right;
@@ -423,13 +424,7 @@ img.title-logo {
     height: fit-content;
   }
 }
-@media screen and (max-device-width: 450px) {
-  #bonus-reward img {
-    width: 60px; /* Adjust the width as needed */
-    height: 90px; /* Maintain the aspect ratio */
-    margin: 1px; /* Adjust the margin as needed */
-  }
-}
+
 
 .hidden {
   display: none;

@@ -25,7 +25,6 @@
 .containerx {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   align-items: center;
   color: rgb(255, 255, 255);
@@ -35,7 +34,7 @@
   font-weight: 500;
   background-image: url("../img/gem_bg.jpg");
   background-position: center;
-  background-size:auto;
+  background-size:cover;
   background-repeat: no-repeat;
   padding-top: 50px;
   width: 50%;
@@ -60,6 +59,10 @@
   line-height: 75px;
   border: 1px solid black;
   cursor: pointer;
+}
+
+.points-table {
+  padding-top: 10px;
 }
 .symbol {
   position: absolute;
@@ -202,4 +205,49 @@ legend.other {
 
 .pulse {
   animation: pulse 0.5s ease-in-out 3;
+}
+
+@media screen and (max-device-height: 667px) {
+  .containerx {
+    width: 100%;
+  }
+  .grid-container {
+
+    grid-template-columns: repeat(5, 65px);
+    grid-template-rows: repeat(5, 65px);
+
+    
+  }
+  .grid-item {
+ 
+    width: 65px;
+    height: 65px;
+ 
+    line-height: 65px;
+
+  }
+  
+  .symbol {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+
+  }
+  .cover {
+    width: 65px;
+    height: 65px;
+  }
+
+  #scoreDisplay {
+    font-size: 15px;
+  }
+
+  #levelDisplay {
+    font-size: 15px;
+  }
+}
+@media screen and (max-device-height: 896px) and (max-device-width: 414px) {
+  .containerx {
+    width: 100%;
+  }
 }
